@@ -3,6 +3,11 @@
     email {$LETSENCRYPT_EMAIL}
 }
 
+# MetagonLM Frontend
+{$MAIN_HOSTNAME} {
+    reverse_proxy insightslm:80
+}
+
 # N8N
 {$N8N_HOSTNAME} {
     # For domains, Caddy will automatically use Let's Encrypt
